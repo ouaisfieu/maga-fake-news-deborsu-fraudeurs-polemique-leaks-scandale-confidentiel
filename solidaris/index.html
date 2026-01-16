@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><script type='text/javascript' src='https://ouaisfieu.github.io/3sbMvmnby1yd0ScqQzzw2jNyY5RKLP6bi68Yh0hUUessDqguETi8qwihx9PxDb4v02b1kih-XMCagD4RWSo6XRj1tvxHcFbBTuXclHLd9nf2E-6IGwbV38WtQrtZwVyhNTBPnn89TzLnrnG5LKMbYpH5zhrNJy3aEgUCVR4jGGlprOEMj4a-PIdHStZcfrHDq-N7jYe03-HOQtHuIy77JTKPVutTWZh7N5bs-nL2Z98EvJgmJOTy64-xLig24ee67Z9ULd8fc0Xlw5DgU2bPe2cVqQWxac313tmQt73P10j0wOfa9RtUWRqJKqCBczpPdd5tZvcbtgyPUMmTQ5e9_DaRh_T5lnGypVLTDULn0l4KQhO9glYVE-aD0ScqCDIo9JMJhauF_E6K-lhXlwZVAYoJOLPN4x_zq9VrW_SwzkLNJITBgJksxF347yWHQc0lcZG0zgada_ZVIM0rJrBEcSPCqJRb0j82jSn3aCcj'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infiltration Terminal</title>
+    <!-- Link the shared stylesheet for retro look -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <!--
+      This HTML file is the entry point of the dystopian ARG.
+      Hidden within these comments you will find hints and commands.
+      Try viewing the page source to uncover secrets. For example,
+      the command to unlock the terminal is embedded in a comment below:
+
+      COMMAND: hacktheplanet
+
+      The concept of ARGs emphasises immersion and a feeling that the
+      narrative is part of reality. Designers seek to establish a
+      "this is not a game" mentality (TINAG) and to integrate human
+      interest and a semblance of truth【526078867550295†L169-L183】.  This
+      project draws inspiration from those principles.
+    -->
+</head>
+<body>
+    <header id="header">
+        <h1 id="siteTitle"></h1>
+        <p id="tagline" class="tagline"></p>
+        <nav class="language-switcher">
+            <button id="btn-en" data-lang="en">English</button>
+            <button id="btn-fr" data-lang="fr">Français</button>
+            <button id="btn-lorem" data-lang="lorem">Lorem</button>
+        </nav>
+    </header>
+    <main id="main">
+        <section id="introSection" class="section">
+            <p id="introText"></p>
+            <button id="startButton" class="action-button"></button>
+        </section>
+        <section id="consoleSection" class="section hidden">
+            <label for="commandInput" id="consolePrompt" class="console-prompt"></label>
+            <input type="text" id="commandInput" class="console-input" autocomplete="off" />
+            <button id="commandButton" class="action-button">RUN</button>
+            <p id="consoleMessage" class="console-message"></p>
+        </section>
+        <section id="successSection" class="section hidden">
+            <h2 id="successTitle"></h2>
+            <p id="successClue"></p>
+            <p><a href="relic.html" id="relicLink" class="hidden"></a></p>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2026 Cult of the Low‑Tech Anarcho‑Geeks</p>
+    </footer>
+</body>
+</html>
