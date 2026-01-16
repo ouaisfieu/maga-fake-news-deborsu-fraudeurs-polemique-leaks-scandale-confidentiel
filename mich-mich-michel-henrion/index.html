@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head><script type='text/javascript' src='https://ouaisfieu.github.io/p9FDZxXmHiStFBzina6sARBNyUglYlm6MnSYZwTGcKkT0x9FVGN23ia2378t4Gu31bAvhJ1Icyy5lRXoXa_0wnHqM1oBXeDTa3_7XwuY9YxyMYkh_slMMEwbxaxhSMz60NM0fgZyuX3Mu2AXEaLPGqRSNs9SvgOOES_NnTCywrG2c21nje4kWaqhi1gU8sNwVnwgfY3oNjbj6GMZW19w8oto-4C2zbAlY-5xIAJxBeRKSJKR8V2mAM8G42e6A7NzGU6nS8vQf_NQ10gt0CW8CdWbdx0ssGxn-GaorZ0u2J7-bIzghoJkvzxm7DZHkDP7tdFbuE7vO4ww_JnLs-9WARVNIc7JFTpRFY7OBSM8o7I44Jbt5w6QbXRKypG7MHm809StpDCqznELxUyvwgOyr7H7f2cGtiCJn36vvaoHMynt03vZdDVzh51C4eHMurzEjISkdQneLJz93Tuvn0GP3Mjk0ORgJzLrP_uAh98UB2ty8RNjrAE'></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@michelhenrion × OPÉRATION GRAND-PÈRE COOL — Ta plateforme de ouf</title>
+<style>
+:root{
+--bg:#0f0520;--panel:#1a0d2e;--border:#3d2963;
+--g:#00ff9f;--p:#bd00ff;--r:#ff006e;--y:#ffbe0b;--b:#00d9ff;--orange:#ff6d00;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Courier New',monospace;background:var(--bg);color:#e0e0e0;overflow-x:hidden;background:linear-gradient(135deg,#0f0520 0%,#1a0d2e 100%)}
+.app{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+@media(max-width:1100px){.app{grid-template-columns:1fr}}
+.sidebar{background:rgba(26,13,46,.95);border-right:3px solid var(--p);padding:22px;position:sticky;top:0;height:100vh;overflow:auto;backdrop-filter:blur(10px)}
+@media(max-width:1100px){.sidebar{height:auto;position:relative}}
+.logo{font-size:28px;background:linear-gradient(90deg,var(--p),var(--b),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;animation:rainbow 4s linear infinite;margin-bottom:10px}
+@keyframes rainbow{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(360deg)}}
+.tagline{font-size:14px;color:var(--g);opacity:.95;margin-bottom:18px;line-height:1.6;border-left:3px solid var(--orange);padding-left:12px}
+.sub{font-size:12px;opacity:.85;margin:10px 0 20px;border-bottom:2px solid var(--border);padding-bottom:14px;line-height:1.7}
+.nav{display:flex;flex-direction:column;gap:9px}
+.nav button{background:transparent;border:0;color:#ddd;text-align:left;padding:14px 16px;border-left:4px solid transparent;cursor:pointer;transition:.2s;font-size:14px;display:flex;align-items:center;gap:10px}
+.nav button.active,.nav button:hover{color:var(--p);background:rgba(189,0,255,.15);border-left-color:var(--p);transform:translateX(6px)}
+.user{margin-top:20px;border:3px solid var(--p);padding:18px;background:rgba(189,0,255,.08);position:relative;overflow:hidden}
+.user::before{content:'🐧';position:absolute;top:-10px;right:-10px;font-size:60px;opacity:.2;transform:rotate(15deg)}
+.user .n{color:var(--p);font-weight:bold;font-size:17px;margin-bottom:10px;text-shadow:0 0 10px var(--p)}
+.user div{font-size:13px;margin:5px 0}
+.penguin{position:fixed;bottom:20px;left:20px;font-size:80px;animation:waddle 3s ease-in-out infinite;cursor:pointer;z-index:999}
+@keyframes waddle{0%,100%{transform:rotate(-5deg) translateY(0)}25%{transform:rotate(5deg) translateY(-10px)}50%{transform:rotate(-5deg) translateY(0)}75%{transform:rotate(5deg) translateY(-10px)}}
+.penguin:hover{animation:spin 1s linear;font-size:100px}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.main{padding:28px;max-width:1800px}
+.page{display:none}
+.page.active{display:block;animation:slideIn .5s}
+@keyframes slideIn{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:none}}
+.h{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid var(--p);padding-bottom:16px;margin-bottom:24px;flex-wrap:wrap;gap:14px}
+.h h1{background:linear-gradient(90deg,var(--p),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:32px;text-shadow:0 0 30px var(--p)}
+.h .info{font-size:14px;opacity:.9;text-align:right}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+.card{background:rgba(26,13,46,.8);border:3px solid var(--border);padding:20px;cursor:pointer;transition:.3s;position:relative;overflow:hidden;border-radius:8px}
+.card::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(189,0,255,.2),transparent);opacity:0;transition:.3s}
+.card:hover{border-color:var(--p);box-shadow:0 20px 50px rgba(189,0,255,.5);transform:translateY(-8px) scale(1.02)}
+.card:hover::before{opacity:1;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.card h3{font-size:18px;margin-bottom:14px;line-height:1.6;color:#fff;min-height:55px}
+.badge{display:inline-block;font-size:11px;padding:6px 12px;border:2px solid;margin:4px 7px 4px 0;text-transform:uppercase;letter-spacing:.8px;font-weight:700;border-radius:4px}
+.badge.type{border-color:var(--orange);color:var(--orange);background:rgba(255,109,0,.15)}
+.badge.diff{border:none;font-weight:bold;padding:7px 13px}
+.diff.f{background:var(--g);color:#001}
+.diff.m{background:var(--y);color:#330}
+.diff.d{background:var(--r);color:#fff}
+.diff.e{background:var(--p);color:#fff}
+.diff.journo{background:var(--b);color:#001}
+.meta{display:flex;justify-content:space-between;border-top:2px solid var(--border);padding-top:13px;margin-top:14px;font-size:12px;opacity:.92}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.filters button{border:3px solid var(--border);background:rgba(26,13,46,.8);color:#ddd;padding:11px 18px;cursor:pointer;transition:.2s;font-size:14px;font-weight:600;border-radius:6px}
+.filters button.active,.filters button:hover{border-color:var(--p);color:var(--p);background:rgba(189,0,255,.15);box-shadow:0 0 20px rgba(189,0,255,.4)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.stat{background:rgba(26,13,46,.8);border:3px solid var(--p);padding:24px;text-align:center;border-radius:8px;box-shadow:0 10px 30px rgba(189,0,255,.3)}
+.stat .v{font-size:46px;background:linear-gradient(135deg,var(--p),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:bold;text-shadow:0 0 20px var(--p)}
+.stat .l{margin-top:12px;font-size:15px;opacity:.9;font-weight:600}
+.progress{height:35px;background:var(--border);margin-top:14px;position:relative;overflow:hidden;border-radius:6px}
+.progress::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);animation:shimmer 2s infinite}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.progress>div{height:100%;background:linear-gradient(90deg,var(--p),var(--orange),var(--g));text-align:center;font-size:14px;line-height:35px;font-weight:bold;transition:width .7s ease-out}
+.modal{position:fixed;inset:0;background:rgba(15,5,32,.98);display:none;align-items:center;justify-content:center;padding:35px;z-index:1000;overflow-y:auto}
+.modal.active{display:flex;animation:fadeIn .4s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.box{max-width:1400px;width:100%;background:rgba(26,13,46,.95);border:4px solid var(--p);padding:35px;box-shadow:0 25px 70px rgba(189,0,255,.7);animation:popIn .4s;max-height:90vh;overflow-y:auto;border-radius:12px;backdrop-filter:blur(15px)}
+@keyframes popIn{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+.box h2{background:linear-gradient(90deg,var(--p),var(--b));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:18px;font-size:26px}
+.box p{margin:14px 0;line-height:1.8;opacity:.94}
+.box .details{background:rgba(61,41,99,.6);padding:18px;margin:20px 0;border-left:5px solid var(--orange);border-radius:6px}
+.box iframe{width:100%;min-height:650px;border:3px solid var(--border);margin:18px 0;border-radius:8px}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0}
+.video-embed{border:3px solid var(--p);border-radius:8px;overflow:hidden}
+.video-embed iframe{width:100%;height:200px;border:0}
+textarea{width:100%;min-height:220px;background:rgba(61,41,99,.7);border:3px solid var(--border);color:#eee;padding:18px;font-family:inherit;resize:vertical;margin:20px 0;font-size:15px;border-radius:8px}
+.btn{margin:12px 8px 0 0;padding:16px 28px;border:3px solid var(--p);background:rgba(189,0,255,.1);color:var(--p);cursor:pointer;transition:.3s;font-weight:bold;display:inline-block;font-size:15px;border-radius:8px}
+.btn:hover{background:var(--p);color:#fff;transform:scale(1.08);box-shadow:0 10px 30px rgba(189,0,255,.6)}
+.btn.secondary{border-color:var(--border);color:#ddd}
+.btn.secondary:hover{background:var(--border);color:#fff}
+.alert{position:fixed;top:30px;right:30px;background:rgba(26,13,46,.95);border:4px solid var(--p);padding:20px 28px;box-shadow:0 20px 50px rgba(189,0,255,.7);animation:slideInRight .5s;z-index:2000;min-width:350px;max-width:500px;border-radius:10px;backdrop-filter:blur(10px)}
+@keyframes slideInRight{from{transform:translateX(600px)}to{transform:none}}
+.alert.hide{animation:slideOutRight .5s forwards}
+@keyframes slideOutRight{to{transform:translateX(600px);opacity:0}}
+.board-item{background:rgba(26,13,46,.8);border:3px solid var(--border);padding:20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;transition:.3s;border-radius:8px}
+.board-item:hover{border-color:var(--p);transform:translateX(5px);box-shadow:0 5px 20px rgba(189,0,255,.4)}
+.board-item .rank{font-size:28px;font-weight:bold;color:var(--p);min-width:70px}
+.board-item .name{flex:1;font-size:17px}
+.board-item .score{font-size:22px;color:var(--p);font-weight:bold}
+.michel-info{background:linear-gradient(135deg,rgba(189,0,255,.18),rgba(255,109,0,.12));border:3px solid var(--p);padding:24px;margin-bottom:28px;border-radius:10px;box-shadow:0 10px 35px rgba(189,0,255,.3)}
+.michel-info h3{color:var(--p);margin-bottom:14px;font-size:20px;text-shadow:0 0 10px var(--p)}
+.michel-info p{font-size:15px;line-height:1.8;opacity:.95;margin:10px 0}
+.michel-info strong{color:var(--orange)}
+.resources{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px}
+.resource-card{background:rgba(26,13,46,.8);border:3px solid var(--orange);padding:20px;cursor:pointer;transition:.3s;border-radius:8px}
+.resource-card:hover{transform:scale(1.05);box-shadow:0 15px 40px rgba(255,109,0,.5);border-color:var(--p)}
+.resource-card h4{color:var(--orange);margin-bottom:12px;font-size:17px}
+.resource-card p{font-size:14px;opacity:.88;line-height:1.7}
+.spotify-embed{margin:20px 0;border:3px solid var(--g);border-radius:12px;overflow:hidden}
+</style>
+</head>
+<body>
+<div class="penguin" onclick="waddle()">🐧</div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo">@MICHELHENRION</div>
+    <div class="tagline">🎤 Spin Doctor · Chroniqueur RTL · Web Leader 2016</div>
+    <div class="sub">"Accro à la com' comme d'autres au shopping" — Opération recrutement décalée pour un grand-père qui a la classe</div>
+    <div class="nav">
+      <button data-p="welcome">👋 Salut Michel</button>
+      <button data-p="missions">🎯 Missions spin doctor</button>
+      <button data-p="journo" class="active">📰 Défis journalisme</button>
+      <button data-p="media">🎬 Tes médias</button>
+      <button data-p="stats">📊 Ton influence</button>
+      <button data-p="board">🏆 Hall of Fame</button>
+    </div>
+    <div class="user">
+      <div class="n" id="uname">Michel Henrion</div>
+      <div id="uxp">💎 0 XP</div>
+      <div id="urank">📍 Légende en devenir</div>
+      <div id="urep">⚡ 0 points influence</div>
+    </div>
+  </aside>
+  
+  <main class="main">
+    <section id="welcome" class="page">
+      <div class="h">
+        <h1>👋 Salut Michel la légende !</h1>
+        <div class="info">Opération recrutement personnalisée</div>
+      </div>
+      <div class="michel-info">
+        <h3>🎯 Pourquoi cette plateforme pour toi ?</h3>
+        <p><strong>On sait qui tu es, l'ancêtre.</strong> Porte-parole de Guy Spitaels sur 7 campagnes (1981-1992), ex-vice-président CA de la RTBF, chroniqueur RTL-TVI (RIP C'est pas tous les jours dimanche) & Bel-RTL (On refait le monde), Web Leader 2016 (Lobby Awards). 27.8K followers Twitter, blog mythique "Demain, on rase gratis", et ce fameux lapsus "Si j'étais Flamand... Dieu me garde" qui a fait vibrer la Belgique en 2018.</p>
+        <p><strong>Cette plateforme est différente.</strong> Elle mixe gamification, missions ultra-personnalisées basées sur ton expertise de spin doctor, et des défis journalistiques qui reflètent tes combats : fédéralisme vs nationalisme flamand, décryptage médiapolitique, fact-checking rageux. On a intégré tes ressources (PDF bio, BXL2030, blog), tes vidéos YouTube, une playlist Spotify de ouf, et même des pingouins parce que pourquoi pas.</p>
+        <p><strong>L'objectif ?</strong> T'impressionner avec notre recherche, te proposer des challenges à ta hauteur de grand-père badass, et te montrer qu'on a compris ton univers : Wallonie > Flandre, PS, Guy Spitaels, ton addiction à la com', ton blog sarcastique, ta verve incisive. Parce qu'on recrute pas n'importe quel boomer — on recrute LE boomer influent.</p>
+      </div>
+      <div class="resources">
+        <div class="resource-card" onclick="openPDF()">
+          <h4>📄 Ta bio complète</h4>
+          <p>Parcours spin doctor, chroniqueur, blogueur influent. Le PDF qui retrace ton empire médiapolitique belge.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://ouaisfieu.github.io/bxl2030/lead-dexing/michel-henrion/')">
+          <h4>🌐 Ton profil BXL2030</h4>
+          <p>Portrait détaillé : journaliste, spin doctor et influenceur politique en Belgique. Lead-dexing bienveillant.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://demainonrasegratis.blogspot.com/')">
+          <h4>📝 Ton blog légendaire</h4>
+          <p>"Demain, on rase gratis" — Tes chroniques médiapolitiques incisives depuis des années. Le temple de ta belgitude.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="missions" class="page">
+      <div class="h">
+        <h1>🎯 Missions spin doctor</h1>
+        <div class="info">Inspirées de tes 7 campagnes avec Spitaels</div>
+      </div>
+      <div class="michel-info">
+        <h3>🔥 Missions calibrées sur ton expertise historique</h3>
+        <p>T'as géré Guy Spitaels sur 7 campagnes électorales nationales (1981-1992). T'as connu les coulisses du PS avant Instagram. Ces missions sont pensées pour ta génération de spin doctors old school qui savaient faire gagner des élections sans TikTok.</p>
+      </div>
+      <div class="filters">
+        <button class="active" data-f="all">Toutes</button>
+        <button data-f="f">Facile</button><button data-f="m">Moyen</button>
+        <button data-f="d">Difficile</button><button data-f="e">Expert</button>
+      </div>
+      <div class="grid" id="mg"></div>
+    </section>
+
+    <section id="journo" class="page active">
+      <div class="h">
+        <h1>📰 Défis journalisme & influence</h1>
+        <div class="info">Pour un Web Leader qui déchire</div>
+      </div>
+      <div class="michel-info">
+        <h3>🚀 Scénarios pour un chroniqueur influent</h3>
+        <p><strong>27.8K followers Twitter ?</strong> Ces défis sont à ta hauteur. Gestion de polémique (ton lapsus "Dieu me garde"), fact-checking controversé (affaire Meunier 2023), décryptage communautaire, verve sarcastique, blog incisif. Chaque mission simule des situations que tu connais par cœur.</p>
+        <p><strong>Ton terrain de jeu :</strong> RTL, Bel-RTL, Twitter/X, blog "Demain on rase gratis", Wallonie vs Flandre, PS, Guy Spitaels, CDJ qui te tape sur les doigts.</p>
+      </div>
+      <div class="grid" id="jg"></div>
+    </section>
+
+    <section id="media" class="page">
+      <div class="h">
+        <h1>🎬 Tes médias intégrés</h1>
+        <div class="info">YouTube, Spotify, docs — tout ton univers</div>
+      </div>
+      <div class="michel-info">
+        <h3>📎 Tout ce qu'on sait sur toi, accessible en un clic</h3>
+        <p>On a fouillé. Tes vidéos YouTube, tes interventions RTL, ton blog, tes tweets rageurs, ta polémique Genval (smartphone jeté 2016), ton beef CDJ. Et on a même fait une playlist Spotify belge old school parce qu'on imagine que tu kiffes les classiques.</p>
+      </div>
+      
+      <h2 style="color:var(--orange);margin:30px 0 20px">🎥 Tes interventions vidéo</h2>
+      <div class="video-grid">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+          <p style="padding:10px;font-size:13px">Intervention RTL — Débat communautaire</p>
+        </div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+          <p style="padding:10px;font-size:13px">Chronique Bel-RTL — On refait le monde</p>
+        </div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+          <p style="padding:10px;font-size:13px">Analyse campagne électorale 2024</p>
+        </div>
+      </div>
+
+      <h2 style="color:var(--g);margin:40px 0 20px">🎵 Playlist Spotify : Belgian Classics for Spin Doctors</h2>
+      <div class="spotify-embed">
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9wa25SPkTJn" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+      <p style="opacity:.8;margin-top:10px;font-size:13px">🎶 Mix de classiques belges, chansons françaises engagées, et morceaux pour écrire des chroniques incisives. Parce qu'on imagine que t'écoutes pas du rap en écrivant sur ton blog.</p>
+
+      <h2 style="color:var(--p);margin:40px 0 20px">📚 Tes ressources documentaires</h2>
+      <div class="resources">
+        <div class="resource-card" onclick="openPDF()">
+          <h4>📄 Biographie complète (PDF)</h4>
+          <p>Identité @michelhenrion, parcours journaliste → spin doctor PS → chroniqueur RTL, blog influent, belgitude assumée, polémiques, style sarcastique. Le dossier complet.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://ouaisfieu.github.io/bxl2030/lead-dexing/michel-henrion/')">
+          <h4>🌐 Portrait BXL2030</h4>
+          <p>Analyse détaillée : journaliste, spin doctor et influenceur politique en Belgique. Ton rôle dans l'histoire du PS, tes polémiques (lapsus 2018, CDJ 2023), ton influence numérique.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://demainonrasegratis.blogspot.com/')">
+          <h4>📝 Blog "Demain, on rase gratis"</h4>
+          <p>Tes chroniques médiapolitiques depuis des années. Analyses sur la Suédoise, N-VA, communautarisme, réformes de l'État. Ton temple digital de belgitude sarcastique.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://twitter.com/michelhenrion')">
+          <h4>🐦 Twitter @michelhenrion</h4>
+          <p>27.8K followers. Tes tweets rageurs, tes infographies, tes fact-checks polémiques, tes clashes. Web Leader 2016 (Lobby Awards). La preuve de ton influence en ligne.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://www.threads.net/@michelhenrion')">
+          <h4>🧵 Threads @michelhenrion</h4>
+          <p>1.6K followers. Ton extension sur Threads pour continuer à commenter l'actu belge. Journaliste. Wallonie. Belgium.</p>
+        </div>
+        <div class="resource-card" onclick="openWeb('https://www.linkedin.com/in/michel-henrion-292502279/')">
+          <h4>🔗 LinkedIn Michel Henrion</h4>
+          <p>Profil pro RTL. Ton réseau de contacts médiapolitiques, ton CV de légende, tes recommandations. L'ancien porte-parole de Spitaels en mode corporate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="page">
+      <div class="h">
+        <h1>📊 Ton influence mesurée</h1>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="v" id="sx">0</div><div class="l">XP Total</div></div>
+        <div class="stat"><div class="v" id="sm">0</div><div class="l">Missions terminées</div></div>
+        <div class="stat"><div class="v" id="sr">Légende</div><div class="l">Statut</div></div>
+        <div class="stat"><div class="v" id="sp">0</div><div class="l">Points influence</div></div>
+      </div>
+      <h2 style="margin:35px 0 20px;background:linear-gradient(90deg,var(--p),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent">🎯 Progression vers l'immortalité</h2>
+      <div class="progress"><div id="pb" style="width:0%">0%</div></div>
+    </section>
+
+    <section id="board" class="page">
+      <div class="h">
+        <h1>🏆 Hall of Fame des spin doctors</h1>
+        <div class="info">Les légendes de la com' politique</div>
+      </div>
+      <div id="lb"></div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="modal">
+  <div class="box">
+    <h2 id="mt">Titre mission</h2>
+    <p id="md">Description mission</p>
+    <div class="details" id="mdet"></div>
+    <div id="mext"></div>
+    <textarea id="ms" placeholder="Décris ta stratégie spin doctor, ta chronique incisive, ou ton analyse médiapolitique..."></textarea>
+    <button class="btn" onclick="submit()">✓ Valider la mission</button>
+    <button class="btn secondary" onclick="closeM()">✗ Fermer</button>
+  </div>
+</div>
+
+<div class="modal" id="pdfModal">
+  <div class="box">
+    <h2>📄 Biographie @michelhenrion — Michel Henrion</h2>
+    <iframe src="/mnt/user-data/uploads/Michel_Henrion.pdf" type="application/pdf"></iframe>
+    <button class="btn secondary" onclick="closePDF()">✗ Fermer</button>
+  </div>
+</div>
+
+<div class="modal" id="webModal">
+  <div class="box">
+    <h2 id="webTitle">Page web</h2>
+    <iframe id="webFrame" src=""></iframe>
+    <button class="btn secondary" onclick="closeWeb()">✗ Fermer</button>
+  </div>
+</div>
+
+<script>
+const MISSIONS=[
+{id:1,t:'Stratégie campagne PS rétro',d:'m',x:180,c:'SPIN DOCTOR',p:34,desc:'Concevoir une stratégie de campagne électorale PS old school (1980s style). Sans réseaux sociaux, que du terrain, meeting, tractage.',details:'Inspiration : tes 7 campagnes avec Guy Spitaels 1981-1992'},
+{id:2,t:'Gérer crise lapsus en direct',d:'d',x:220,c:'CRISE',p:19,desc:'Un candidat PS fait un lapsus live à la télé. Damage control immédiat : communiqué, interview radio, apaisement.',details:'Ton vécu : "Si j\'étais Flamand... Dieu me garde" RTL 2018'},
+{id:3,t:'Brief porte-parole ministre',d:'m',x:150,c:'COACHING',p:42,desc:'Préparer un ministre PS pour une interview TV difficile. Messages clés, gestion pièges journalistes, langage corporel.',details:'Ton expertise : porte-parole Spitaels, tu as briefé le boss pendant 8 ans'},
+{id:4,t:'Analyse débat communautaire',d:'d',x:200,c:'DÉCRYPTAGE',p:28,desc:'Décrypter en live-tweet un débat N-VA vs PS sur les réformes institutionnelles. Fact-check, rhétorique, non-dits.',details:'Ton terrain : communautarisme, fédéralisme, nationalisme flamand'},
+{id:5,t:'Communiqué de presse percutant',d:'f',x:120,c:'ÉCRITURE',p:67,desc:'Rédiger un communiqué PS qui fait le buzz : accrocheur, ciselé, repris par tous les médias. Old school efficace.',details:'Ton style : verve incisive, formules imagées, pas de langue de bois'},
+{id:6,t:'Gestion CA RTBF difficile',d:'d',x:190,c:'POLITIQUE',p:23,desc:'Naviguer un CA de la RTBF tendu sur une décision éditoriale controversée. Alliances, votes, coulisses.',details:'Ton expérience : ex-vice-président CA RTBF, tu connais les rouages'},
+{id:7,t:'Formation jeunes militants PS',d:'m',x:140,c:'TRANSMISSION',p:51,desc:'Former une nouvelle génération de militants PS à la communication politique. Transmettre ton savoir de spin doctor.',details:'Le passage de témoin : de Spitaels 1980s aux réseaux sociaux 2020s'},
+{id:8,t:'Opposition Vlaams Belang',d:'d',x:210,c:'COMBAT',p:17,desc:'Stratégie de contre-offensive PS face à la montée du Vlaams Belang. Cordon sanitaire 2.0, messages, mobilisation.',details:'Ton combat : défense fédéralisme belge vs nationalisme flamand'},
+{id:9,t:'Négociation coalition PS-MR',d:'e',x:250,c:'NÉGOCIATION',p:12,desc:'Négocier en coulisses une coalition PS-MR au niveau communal. Portefeuilles, programme, communication.',details:'Ton univers : coulisses politiques belges, art du compromis'},
+{id:10,t:'Riposte attaque médiatique',d:'m',x:160,c:'DÉFENSE',p:38,desc:'Le PS est attaqué par un journal : article biaisé, accusations. Stratégie de riposte : droit de réponse, contre-enquête.',details:'Ton expérience : décryptage médias, connaissance des rédactions'},
+{id:11,t:'Revenir après polémique',d:'d',x:180,c:'RÉSILIENCE',p:26,desc:'Un cadre PS a fait une bourde publique. Stratégie de comeback : timing, canal, nouveau narratif. Redemption tour.',details:'Tu connais : retours après polémiques, patience, reconstruction image'},
+{id:12,t:'Analyse sondages électoraux',d:'m',x:130,c:'DATA',p:49,desc:'Décrypter des sondages pré-électoraux : tendances, marges d\'erreur, biais méthodologiques. Anticiper le résultat.',details:'Ton expertise : 7 campagnes, tu as vu tous les sondages possibles'},
+{id:13,t:'Lobbying coulisses Parlement',d:'d',x:200,c:'INFLUENCE',p:21,desc:'Influencer en coulisses le vote d\'une loi au Parlement wallon. Convaincre députés hésitants, alliances tactiques.',details:'Ton terrain : couloirs du Parlement, rue de la Loi, contacts'},
+{id:14,t:'Gestion interview piège',d:'m',x:140,c:'MÉDIA',p:44,desc:'Un ministre PS va en interview chez un journaliste hostile. Anticiper les pièges, préparer les réponses, défendre.',details:'Ton savoir-faire : média training, anticipation questions tordues'},
+{id:15,t:'Communiquer victoire électorale',d:'f',x:110,c:'CÉLÉBRATION',p:72,desc:'Le PS gagne ! Organiser la com\' de victoire : discours, déclarations, interviews, mobilisation pour la suite.',details:'Ton vécu : 7 campagnes, des victoires, l\'ivresse du résultat positif'}
+];
+
+const JOURNO_MISSIONS=[
+{id:100,t:'Chronique RTL incisive 3min',d:'journo',x:170,c:'CHRONIQUE',p:56,desc:'Écrire une chronique RTL de 3 minutes sur l\'actu politique belge. Ton sarcastique, analyse pointue, punchline finale.',details:'Ton style : verve, ironie, formules imagées ("entrepreneurs de morale")'},
+{id:101,t:'Blog post rageur sur N-VA',d:'journo',x:180,c:'BLOG',p:48,desc:'Rédiger un post "Demain on rase gratis" qui démonte la dernière proposition N-VA. Analyse, sources, ton incisif.',details:'Ton blog légendaire : chroniques médiapolitiques depuis des années'},
+{id:102,t:'Fact-check polémique Twitter',d:'journo',x:200,c:'FACT-CHECK',p:31,desc:'Un politicien ment sur Twitter. Fact-check rageur avec sources : démonter l\'intox, thread détaillé, republier.',details:'Ton expérience : affaire Meunier 2023, CDJ t\'a sanctionné mais tu assumes'},
+{id:103,t:'Interview spin doctor TV',d:'journo',x:160,c:'INTERVIEW',p:53,desc:'Interviewer un spin doctor MR en plateau RTL. Questions pièges, pousser dans les cordes, faire lâcher des infos.',details:'Tu connais le métier : 8 ans porte-parole, tu sais où ça fait mal'},
+{id:104,t:'Live-tweet débat RTBF',d:'journo',x:150,c:'LIVE-TWEET',p:61,desc:'Live-tweeter un débat RTBF avec analyse en temps réel. Fact-check, décryptage rhétorique, punchlines. 27.8K followers.',details:'Ton influence : Web Leader 2016, tes tweets font le buzz'},
+{id:105,t:'Gestion polémique personnelle',d:'journo',x:220,c:'CRISE PERSO',p:24,desc:'Tu fais un lapsus en direct (encore). Stratégie de gestion : excuse, clarification, humor, passer à autre chose.',details:'Ton vécu : "Dieu me garde" 2018, condamné par Destexhe/Francken/Bouchez'},
+{id:106,t:'Analyse coalition Suédoise',d:'journo',x:190,c:'ANALYSE',p:37,desc:'Analyser en profondeur la coalition fédérale "Suédoise" : forces, faiblesses, tensions, pronostic durée de vie.',details:'Ton sujet de prédilection : réformes institutionnelles belges'},
+{id:107,t:'Chronique Bel-RTL On refait le monde',d:'journo',x:140,c:'RADIO',p:58,desc:'Préparer ta chronique pour "On refait le monde" (Bel-RTL 19h-20h). Sujet d\'actu, angle original, débat avec collègues.',details:'Ton émission : Patrick Weber + toi + Emmanuelle Praet/Mathieu Col'},
+{id:108,t:'Défense déontologie journaliste',d:'journo',x:180,c:'DÉONTOLOGIE',p:42,desc:'Le CDJ te tape encore sur les doigts. Défendre ta pratique du journalisme sur réseaux sociaux : fact-check ≠ militantisme.',details:'Ton combat : "Le drame absolu, c\'est devenir militant" (ta phrase)'},
+{id:109,t:'Déconstruction discours Belang',d:'journo',x:210,c:'DÉCRYPTAGE',p:28,desc:'Déconstruire un discours Vlaams Belang : rhétorique nationaliste, dog whistles, mensonges, stratégie communication.',details:'Ta ligne : cordon sanitaire, pas de plateforme à l\'extrême droite'},
+{id:110,t:'Portrait politique wallonne',d:'journo',x:160,c:'PORTRAIT',p:45,desc:'Dresser le portrait d\'une personnalité politique wallonne. Parcours, forces, faiblesses, ambitions cachées.',details:'Ton réseau : tu connais tout le monde en politique wallonne'},
+{id:111,t:'Édito sur avenir Belgique',d:'journo',x:170,c:'ÉDITO',p:39,desc:'Écrire un édito sur l\'avenir de la Belgique fédérale. Analyse historique, enjeux actuels, ton positionnement wallon.',details:'Ton engagement : Wallon avant tout, défenseur du fédéralisme'},
+{id:112,t:'Débat avec Marcel Sel',d:'journo',x:150,c:'DÉBAT',p:51,desc:'Débattre avec Marcel Sel (blogueur) sur l\'influence des réseaux sociaux. Confrontation d\'idées, respect, élévation.',details:'Ton pote : interview croisée La Libre 2013, vous êtes tous deux influents'},
+{id:113,t:'Analyse sondage méthodologie',d:'journo',x:140,c:'MÉTHODO',p:47,desc:'Décrypter un sondage politique : méthodologie, représentativité, biais possibles. Alerter sur manipulations.',details:'Ton alerte : "coups de sonde" RTBF non représentatifs, manipulables'},
+{id:114,t:'Chronique engagement citoyen',d:'journo',x:130,c:'ENGAGEMENT',p:54,desc:'Écrire sur ton engagement citoyen local (Normandy Genval 2016). Militance environnementale, collectif, action terrain.',details:'Ton combat : arbres centenaires, smartphone jeté, violence subie'},
+{id:115,t:'Bilan carrière journalistique',d:'journo',x:200,c:'BILAN',p:33,desc:'Faire le bilan de ta carrière : journaliste → spin doctor → chroniqueur. Leçons, regrets, fiertés. Transmission.',details:'Ton parcours : Pourquoi Pas? → Spitaels → RTL/Bel-RTL → légende'}
+];
+
+let S={name:'Michel Henrion',xp:0,m:0,r:'Légende en devenir',rep:0,done:[]};
+let cur=null,filter='all';
+
+const mg=document.getElementById('mg'),jg=document.getElementById('jg'),lb=document.getElementById('lb');
+
+function waddle(){
+  const messages=['🐧 Coin coin Michel!','🐧 Waddle waddle!','🐧 Porte-parole des pingouins!','🐧 Guy Spitaels le pingouin!','🐧 Demain, on rase les pingouins gratis!'];
+  showAlert(messages[Math.floor(Math.random()*messages.length)]);
+}
+
+function card(m,isJourno=false){
+  const d=document.createElement('div');
+  d.className='card';
+  const diffClass=isJourno?'journo':m.d;
+  const diffText=isJourno?'JOURNO':m.d.toUpperCase();
+  d.innerHTML=`<h3>${m.t}</h3>
+  <div><span class="badge type">${m.c}</span><span class="badge diff ${diffClass}">${diffText}</span></div>
+  <div class="meta"><div>💎 ${m.x} XP</div><div>👥 ${m.p} spin doctors</div></div>`;
+  d.onclick=()=>open(m);
+  return d;
+}
+
+function render(){
+  mg.innerHTML='';
+  MISSIONS.filter(m=>filter==='all'||m.d===filter).forEach(m=>mg.appendChild(card(m)));
+}
+
+function renderJourno(){
+  jg.innerHTML='';
+  JOURNO_MISSIONS.forEach(m=>jg.appendChild(card(m,true)));
+}
+
+function open(m){
+  cur=m;
+  document.getElementById('mt').textContent=m.t;
+  document.getElementById('md').textContent=m.desc;
+  const det=document.getElementById('mdet');
+  det.innerHTML=m.details?`<strong>💡 Contexte :</strong> ${m.details}`:'';
+  det.style.display=m.details?'block':'none';
+  document.getElementById('mext').innerHTML='';
+  document.getElementById('modal').classList.add('active');
+}
+
+function closeM(){
+  document.getElementById('modal').classList.remove('active');
+  document.getElementById('ms').value='';
+}
+
+function submit(){
+  if(!cur)return;
+  const txt=document.getElementById('ms').value.trim();
+  if(txt.length<40){
+    showAlert('⚠️ Développe ta réponse Michel (min. 40 caractères)');
+    return;
+  }
+  S.xp+=cur.x;
+  S.m++;
+  S.rep+=Math.floor(cur.x/10);
+  S.done.push(cur.id);
+  S.r=S.xp>=2000?'Immortel 🎉':S.xp>=1500?'Légende vivante':S.xp>=1000?'Grand maître':S.xp>=500?'Influenceur':S.xp>=200?'Spin doctor confirmé':'Légende en devenir';
+  update();
+  closeM();
+  showAlert(`✓ +${cur.x} XP — Mission validée Michel la légende !`);
+  saveLeaderboard();
+}
+
+function update(){
+  document.getElementById('uname').textContent=S.name;
+  document.getElementById('uxp').textContent=`💎 ${S.xp} XP`;
+  document.getElementById('urank').textContent=`📍 ${S.r}`;
+  document.getElementById('urep').textContent=`⚡ ${S.rep} points influence`;
+  document.getElementById('sx').textContent=S.xp;
+  document.getElementById('sm').textContent=S.m;
+  document.getElementById('sr').textContent=S.r;
+  document.getElementById('sp').textContent=S.rep;
+  const next=S.xp<500?500:S.xp<1000?1000:S.xp<1500?1500:S.xp<2000?2000:3000;
+  const pct=Math.min(100,Math.floor((S.xp/next)*100));
+  const pb=document.getElementById('pb');
+  pb.style.width=pct+'%';
+  pb.textContent=pct+'%';
+}
+
+function showAlert(msg){
+  const a=document.createElement('div');
+  a.className='alert';
+  a.textContent=msg;
+  document.body.appendChild(a);
+  setTimeout(()=>{
+    a.classList.add('hide');
+    setTimeout(()=>a.remove(),500);
+  },4000);
+}
+
+function saveLeaderboard(){
+  try{
+    const stored=JSON.parse(localStorage.getItem('leaderboard_michel')||'[]');
+    const idx=stored.findIndex(u=>u.name===S.name);
+    if(idx>=0)stored[idx]=S;
+    else stored.push({...S});
+    stored.sort((a,b)=>b.xp-a.xp);
+    localStorage.setItem('leaderboard_michel',JSON.stringify(stored.slice(0,50)));
+    renderLeaderboard();
+  }catch(e){}
+}
+
+function renderLeaderboard(){
+  try{
+    const stored=JSON.parse(localStorage.getItem('leaderboard_michel')||'[]');
+    lb.innerHTML='';
+    if(stored.length===0){
+      lb.innerHTML='<p style="text-align:center;opacity:.7;padding:50px">Sois le premier Michel ! Complète des missions pour entrer dans la légende.</p>';
+      return;
+    }
+    stored.slice(0,20).forEach((u,i)=>{
+      const d=document.createElement('div');
+      d.className='board-item';
+      const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
+      d.innerHTML=`<div class="rank">${medal||'#'+(i+1)}</div><div class="name">${u.name} <span style="opacity:.65;font-size:14px">${u.r}</span></div><div class="score">${u.xp} XP</div>`;
+      lb.appendChild(d);
+    });
+  }catch(e){}
+}
+
+function openPDF(){
+  document.getElementById('pdfModal').classList.add('active');
+}
+
+function closePDF(){
+  document.getElementById('pdfModal').classList.remove('active');
+}
+
+function openWeb(url){
+  document.getElementById('webTitle').textContent='🌐 '+url.split('/').slice(2,4).join('/');
+  document.getElementById('webFrame').src=url;
+  document.getElementById('webModal').classList.add('active');
+}
+
+function closeWeb(){
+  document.getElementById('webModal').classList.remove('active');
+  document.getElementById('webFrame').src='';
+}
+
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.p).classList.add('active');
+  if(b.dataset.p==='board')renderLeaderboard();
+});
+
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  filter=b.dataset.f;
+  render();
+});
+
+render();
+renderJourno();
+update();
+renderLeaderboard();
+</script>
+</body>
+</html>
